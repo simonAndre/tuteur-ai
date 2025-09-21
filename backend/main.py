@@ -4,11 +4,12 @@ from pydantic import BaseModel, Field
 from typing import List, Optional
 from datetime import datetime, timedelta
 import os
-import re
+from dotenv import load_dotenv
 
 from guardrails import sanitize_and_demote_solutions
 from adapters.openai_adapter import llm_answer
 
+load_dotenv()
 app = FastAPI(title="Tuteur IA — API")
 
 # CORS (à adapter au domaine du front)

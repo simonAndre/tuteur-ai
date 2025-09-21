@@ -1,8 +1,11 @@
-# Implémentation asynchrone minimaliste s’appuyant sur la **Responses API** d’OpenAI (ou remplace par un autre fournisseur). Renseigne `OPENAI_API_KEY` dans `.env`.
 import os
-import json
 import httpx
+from dotenv import load_dotenv
 
+# Implémentation asynchrone minimaliste s’appuyant sur la **Responses API** d’OpenAI 
+# Renseigner `OPENAI_API_KEY` dans `.env`.
+
+load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")

@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "command": "npm run dev",
+      "name": "Run Frontend",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/frontend",
+      "type": "node-terminal"
+    },
+    {
+      "name": "Backend Fastapi: Debug",
+      "type": "debugpy",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "module": "uvicorn",
+      "cwd": "${workspaceFolder}/backend",
+      "python": "${workspaceFolder}/backend/.venv/bin/python",
+      "args": ["main:app","--reload","--port","8000"]
+    }
+  ]
+}
